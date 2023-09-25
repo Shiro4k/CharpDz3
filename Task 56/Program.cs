@@ -43,7 +43,20 @@ int[] SumLineMatrix(int[,] matrix)
     }
     return arr;
 }
-
+void MinLineMatrix(int[] arr)
+{
+    int min = arr[0];
+    int minID = 0;
+    for (int i = 1; i < arr.Length; i++)
+    {
+        if(min > arr[i])
+        {
+            min = arr[i];
+            minID = i;
+        }
+    }
+    Console.WriteLine($"Строка с наименьшей суммой элементов: {minID} ");
+}
 
 
 
@@ -56,3 +69,4 @@ PrintMatrix(array);
 System.Console.WriteLine();
 int[] arr = SumLineMatrix(array);
 PrintArr(arr);
+MinLineMatrix(arr);
